@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Steven Hernandez">
     <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js" defer></script>
     <title> Calculator Application </title>
 </head>
 <body>
@@ -31,12 +32,12 @@
         </section>
 
         <section class="misc__input">
-            <button class="box"> &#183; </button>
-            <button class="box"> &#37;  </button>
-            <button class="box"> &#8634;</button>
-            <button class="box"> &#9003;</button>
-            <button class="box"> &#40;  </button>
-            <button class="box"> &#41;  </button>
+            <button class="box number" id=".">   &#183; </button>
+            <button class="box operator" id="%"> &#37;  </button>
+            <button class="box" id="reset">      &#8634;</button>
+            <button class="box" id="delete">     &#9003;</button>
+            <button class="box operator" id="("> &#40;  </button>
+            <button class="box operator" id=")"> &#41;  </button>
         </section>
     </main>
     <h1> Awesome Calculator </h1>
