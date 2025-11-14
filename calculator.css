@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bitcount", system-ui;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  border: 10px solid black;
+  background-color: grey;
+  text-align: center;
+}
+
+body > .user__input {
+  font-size: 2.5rem;
+  display: block;
+  border: 7px groove black;
+  width: 90%;
+  margin-top: 2%;
+  border-radius: 10px;
+  padding: 0.2em;
+  align-self: center;
+}
+
+.main__calculator {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.user__buttons {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  border: 5px solid rgb(80,77,77);
+  background-color: rgba(187,180,180,0.877);
+  border-radius: 50px;
+  position: relative;
+  width: 70%;
+  height: 55.2vh;
+}
+
+.button__selection {
+  display: grid;
+  grid-template-columns: repeat(3, 32.2%);
+  grid-auto-rows: 20.34%;
+  place-content: center;
+  margin-left: 1.5%;
+}
+
+.box {
+  font-size: 2.3rem;
+  font-weight: bolder;
+  background-color: aliceblue;
+  border: 5px solid black;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.button__selection > .box:last-child {
+  background-color: rgb(20,245,20);
+}
+
+.button__selection > .operator {
+  background-color: rgb(123, 143, 143);
+}
+
+.button__selection > .number {
+  background-color: rgb(37, 29, 29);
+  color: whitesmoke;
+  border-color: rgb(74, 77, 77);
+}
+
+.misc__input {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 79.34vw;
+}
+
+.misc__input > .box {
+  width: 65.5px;
+  height: 65.5px;
+}
+
+.main__calculator > h1 {
+  font-size: 1.8rem;
+}
+
+.box:hover {
+  background-color: rgb(202, 183, 183);
+}
+
+@media screen and (orientation: landscape) {
+  .main__calculator {
+    flex-flow: row nowrap;
+  }
+
+  .user__selection {
+    flex-flow: row nowrap;
+    height: 60.2vh;
+    margin-left: 5%;
+  }
+
+  .box {
+    font-size: 2rem;
+    width: 45.5px;
+    height: 45.5px;
+  }
+
+  .button__selection {
+    grid-template-columns: repeat(3, 50.2%);
+    grid-auto-rows: 20.34%;
+    place-content: center;
+    margin-left: 8.5%;
+  }
+
+  .misc__input {
+    flex-flow: column wrap;
+    width: 79.34vw;
+    height: 60vh;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .misc__input > .box{
+    width: 60.5px;
+    height: 60.5px;
+  }
+
+}
