@@ -12,15 +12,15 @@ boxes.forEach((element)=>{
   });
 });
 
-numbers.forEach((element)=>{
-  element.addEventListener("click", ()=>{
-    input.value += element.id;
+numbers.forEach((number)=>{
+  number.addEventListener("click", ()=>{
+    input.value += number.id;
   });
 });
 
-operators.forEach((element)=>{
-  element.addEventListener("click", ()=>{
-    input.value += ' ' + element.id + ' ';
+operators.forEach((operate)=>{
+  operate.addEventListener("click", ()=>{
+    input.value += ' ' + operate.id + ' ';
     
     if (input.value.includes("=")) {
       const final_answer = new Function("return " + input.value.trimEnd().slice(0, -1))();
