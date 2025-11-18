@@ -44,3 +44,4 @@ This ensures that there are no default operations done whenever I create a new b
   margin-left: 1.5%;
 }
 ```
+Finally, in order for better responsive design, I implemeted a media screen whenver a phone is in landscape mode. 
