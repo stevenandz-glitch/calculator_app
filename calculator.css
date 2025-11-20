@@ -105,23 +105,23 @@ body > .user__input {
     flex-flow: row nowrap;
   }
 
-  .user__selection {
-    flex-flow: row nowrap;
-    height: 60.2vh;
-    margin-left: 5%;
-  }
-
   .box {
     font-size: 2rem;
     width: 45.5px;
     height: 45.5px;
   }
 
+  .user__buttons {
+    margin-left: 5%;
+    height: 15.8rem;
+  }
+
   .button__selection {
-    grid-template-columns: repeat(3, 50.2%);
+    grid-template-columns: repeat(3, 20.2%);
     grid-auto-rows: 20.34%;
     place-content: center;
-    margin-left: 8.5%;
+    margin-left: 2%;
+    height: 60vh;
   }
 
   .misc__input {
