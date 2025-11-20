@@ -100,7 +100,7 @@ const equal_btn = document.getElementById("=");
 const reset_btn = document.getElementById("reset");
 const delete_btn = document.getElementById("delete");
 ```
-The main variables of concern for this program will be the `input `, `equals_btn`, `reset_btn`, and `delet_btn` as they perform specfic functions. `input` is resonsible for showing the user input in which I will be using it as a ```cpp \033[1;32mstring[0m\033```. Whenever a button is pressed, the value of the button is concatinated as a character into the `input` string. Since we are concatinating, it is crucial to keep in mind the spaces of each character. 
+The main variables of concern for this program will be the `input `, `equals_btn`, `reset_btn`, and `delet_btn` as they perform specfic functions. `input` is resonsible for showing the user input in which I will be using it as a string. Whenever a button is pressed, the value of the button is concatinated as a character into the `input` string. Since we are concatinating, it is crucial to keep in mind the spaces of each character. 
 
 #### 1. For Operators
 ```js
@@ -111,3 +111,18 @@ input.value += ' ' + operate.id + ' ';
 ```js
 input.value += number.id;
 ```
+
+When operators are pressed, the operator will add a space before and after. While operator placement does not matter for computation, I chose to add the extra spaces to make the input screen more presentable to the eye. When numbers are pressed, the value will be concatinated into the input screen as a string. Once the user presses the `=` button, the input of the screen will be evaulated by the `Function()` class. 
+```js
+const final_answer = new Function("return " + input.value.trimEnd().slice(0, -1))();
+```
+Once the arithmetic is computed, the value of the screen will be replaced by the final answer, and all other buttons except `reset_btn` will be disabled. 
+```js
+boxes.forEach((element)=>{
+  if (element.id !== "reset") {
+    element.disabled = true;
+  }
+});
+```
+
+It is important to note here that the `boxes` variable is a container for all buttons. 

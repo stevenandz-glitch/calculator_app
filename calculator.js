@@ -26,7 +26,7 @@ operators.forEach((operate)=>{
       const final_answer = new Function("return " + input.value.trimEnd().slice(0, -1))();
 
       if ((final_answer == "Infinity") || (final_answer == "-Infinity")) {
-        input.value = "NOOO!!!!";
+        input.value = "Error in computing";
       } else {
         input.value = "= " + final_answer;
       }
