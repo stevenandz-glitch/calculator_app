@@ -44,4 +44,59 @@ This ensures that there are no default operations done whenever I create a new b
   margin-left: 1.5%;
 }
 ```
-Finally, in order for better responsive design, I implemeted a media screen whenver a phone is in landscape mode. 
+Creating the buttons section as `grid` makes it easier to manipulate each individual button into a desirable position. Finally, in order for better responsive design, I implemeted a media screen whenver a phone is in landscape mode. 
+```css
+@media screen and (orientation: landscape) {
+  .main__calculator {
+    flex-flow: row nowrap;
+  }
+
+  .user__selection {
+    flex-flow: row nowrap;
+    height: 60.2vh;
+    margin-left: 5%;
+  }
+
+  .box {
+    font-size: 2rem;
+    width: 45.5px;
+    height: 45.5px;
+  }
+
+  .button__selection {
+    grid-template-columns: repeat(3, 50.2%);
+    grid-auto-rows: 20.34%;
+    place-content: center;
+    margin-left: 8.5%;
+  }
+
+  .misc__input {
+    flex-flow: column wrap;
+    width: 79.34vw;
+    height: 60vh;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .misc__input > .box{
+    width: 60.5px;
+    height: 60.5px;
+  }
+
+}
+```
+Here, I changed the flex displays that were once `column nowrap` to `column wrap` to allow wrapping when the content goes out-of-bounds. Also, I chose to change the layout of classes `.main__calculator` and `.user__selection` to `row nowrap` in order to fill the phone screen when the orientation is in landscape. 
+
+## Back-End
+
+### 1. Javascript
+The backend design is simple for this equally simple project; a button is pressed and the screen is updated. Similar to a regular calculator, my web calculator will follow a pattern of listening when a button is pressed, and updates the value of the screen until the user presses the `=` button. With every web project using Javascript, I begin by instantiating by document selectors.
+```js
+let input = document.querySelector("input");
+const boxes = document.querySelectorAll(".box");
+const numbers = document.querySelectorAll(".number");
+const operators = document.querySelectorAll(".operator");
+const equal_btn = document.getElementById("=");
+const reset_btn = document.getElementById("reset");
+const delete_btn = document.getElementById("delete");
+```
