@@ -1,4 +1,4 @@
-# Calulator Application 
+# Calulator Web Application 
 This is a web application coded in HTML, CSS, and Javascript in which it is a simple calculator program with a graphical user interface. For this project, I wanted to combine all of the World Wide Web languages into something I am proud of, and there is no better start than the simplest tool for mankind...a number cruncher. With regards to the front-end development, I wanted to test the `grid` and `flex` layouts in CSS as well as hone my element structure in HTML. In the back-end process,the goal was make the event listeners reponsive to user input, and practice DOM (Document Object Model) manipulation.
 
 ## Front-End
@@ -90,7 +90,7 @@ Here, I changed the flex displays that were once `column nowrap` to `column wrap
 ## Back-End
 
 ### 1. Javascript
-The backend design is simple for this equally simple project; a button is pressed and the screen is updated. Similar to a regular calculator, my web calculator will follow a pattern of listening when a button is pressed, and updates the value of the screen until the user presses the `=` button. With every web project using Javascript, I begin by instantiating by document selectors.
+The backend design is simple for this equally simple project; a button is pressed and the screen is updated. Similar to a regular calculator, my web calculator will follow a pattern of listening when a button is pressed, and updates the value of the screen until the user presses the `=` button. With every web project using Javascript, I begin by instantiating my document selectors.
 ```js
 let input = document.querySelector("input");
 const boxes = document.querySelectorAll(".box");
@@ -99,4 +99,15 @@ const operators = document.querySelectorAll(".operator");
 const equal_btn = document.getElementById("=");
 const reset_btn = document.getElementById("reset");
 const delete_btn = document.getElementById("delete");
+```
+The main variables of concern for this program will be the `input `, `equals_btn`, `reset_btn`, and `delet_btn` as they perform specfic functions. `input` is resonsible for showing the user input in which I will be using it as a ==string==. Whenever a button is pressed, the value of the button is concatinated as a ==character== into the `input` string. Since we are concatinating, it is crucial to keep in mind the spaces of each character. 
+
+#### 1. For Operators
+```js
+input.value += ' ' + operate.id + ' ';
+```
+
+#### 2. For Numbers
+```js
+input.value += number.id;
 ```
