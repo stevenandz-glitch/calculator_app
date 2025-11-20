@@ -100,7 +100,7 @@ const equal_btn = document.getElementById("=");
 const reset_btn = document.getElementById("reset");
 const delete_btn = document.getElementById("delete");
 ```
-The main variables of concern for this program will be the `input `, `equals_btn`, `reset_btn`, and `delet_btn` as they perform specfic functions. `input` is resonsible for showing the user input in which I will be using it as a ==string==. Whenever a button is pressed, the value of the button is concatinated as a ==character== into the `input` string. Since we are concatinating, it is crucial to keep in mind the spaces of each character. 
+The main variables of concern for this program will be the `input `, `equals_btn`, `reset_btn`, and `delet_btn` as they perform specfic functions. `input` is resonsible for showing the user input in which I will be using it as a ```cpp \033[1;32mstring[0m\033```. Whenever a button is pressed, the value of the button is concatinated as a character into the `input` string. Since we are concatinating, it is crucial to keep in mind the spaces of each character. 
 
 #### 1. For Operators
 ```js
