@@ -135,3 +135,7 @@ It is important to note here that the `boxes` variable is a container for all bu
 ### Landscape Mode
 ![Landscape Mode](images/calculator_app_landscape.png)
 
+### Additional Resources
+## 1. Coolers (color palette): [coolers](https://coolors.co/)
+## 2. Pixaby (sound effects): [pixaby](https://pixabay.com/sound-effects/)
+
