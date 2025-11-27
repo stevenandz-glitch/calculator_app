@@ -130,7 +130,7 @@ It is important to note here that the `boxes` variable is a container for all bu
 ## Showcase
 
 ### Portrait Mode
-![Portrait Mode](calculator_app.png)
+![Portrait Mode](images/calculator_app.png)
 
 ### Landscape Mode
-![Landscape Mode](calculator_app_landscape.png)
+![Landscape Mode](images/calculator_app_landscape.png)

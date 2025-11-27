@@ -1,3 +1,6 @@
-click_sound.mp3
-calculator_app.png
-calculator_app_landscape.png
+sounds/
+  click_sound.mp3
+
+images/
+  calculator_app.png
+  calculator_app_landscape.png
