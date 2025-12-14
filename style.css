@@ -48,6 +48,7 @@ body > .user__input {
   align-items: center;
   flex-grow: 1;
   gap: 10px;
+  position: relative;
 }
 
 .user__buttons {
@@ -110,8 +111,10 @@ body > .user__input {
 
 @media screen and (orientation: landscape) {
   body > .user__input {
+    margin-top: 0.5%;
     font-size: 1.9rem;
   }
+
   .main__calculator {
     flex-flow: row nowrap;
     max-height: inherit;
@@ -130,9 +133,16 @@ body > .user__input {
   }
 
   .misc__input {
-    width: 50%;
+    width: 45%;
     max-height: 12.32rem;
     align-items: center;
     gap: 5px;
   }
+
+  h1 {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+  }
 }
+
