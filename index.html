@@ -40,6 +40,12 @@
             <button class="box operator" id=")"> &#41;  </button>
         </section>
     </main>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service_worker.js");
+      }
+    </script>
     <h1> Awesome Calculator </h1>
 </body>
 </html>
