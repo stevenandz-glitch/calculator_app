@@ -1,35 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Bitcount", system-ui;
+  font-family: "Roboto", system-ui;
+  transition: var(--TRANSITION);
 }
 
 :root {
-  --ANIMATION: all 1s ease-in-out;
+  --TRANSITION: all 0.5s ease-in-out;
+  --BASIC-BORDER: 2px solid var(--MAIN-COLOR);
+  --MAIN-COLOR: black;
+  --SECONDARY-COLOR: rgb(80,77,77);
+  --THIRD-COLOR: rgba(187,180,180,0.877);
+  --LIGHT-COLOR: whitesmoke;
+  --MEDIUM-LIGHT-COLOR: grey;
+  --SPECIAL-COLOR: rgb(20,245,20);
 }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  border: 5px solid black;
-  background-color: grey;
+  border: var(--BASIC-BORDER);
+  border-width: 5px;
+  background-color: var(--MEDIUM-LIGHT-COLOR);
   text-align: center;
+  transition: none;
 }
 
 body > .user__input {
   font-size: 2.5rem;
   display: block;
-  border: 7px groove black;
+  border: var(--BASIC-BORDER);
   max-width: 90%;
   margin-top: 2%;
   border-radius: 10px;
   padding: 0.2em;
   align-self: center;
-  transition: var(--ANIMATION);
 }
 
 .main__calculator {
@@ -39,7 +48,6 @@ body > .user__input {
   align-items: center;
   flex-grow: 1;
   gap: 10px;
-  transition: var(--ANIMATION);
 }
 
 .user__buttons {
@@ -48,28 +56,26 @@ body > .user__input {
   grid-auto-rows: 20.34%;
   place-content: center;
   align-items: center;
-  border: 1.2px solid rgb(80,77,77);
-  background-color: rgba(187,180,180,0.877);
+  border: var(--BASIC-BORDER);
+  background-color: var(--THIRD-COLOR);
   width: 70%;
   height: 20.34rem;
   border-radius: 10px;
   padding-left: 1rem;
-  transition: var(--ANIMATION);
 }
 
 .box {
   font-size: 2.3rem;
   font-weight: bolder;
-  background-color: aliceblue;
-  border: 2px solid black;
+  background-color: var(--LIGHT-COLOR);
+  border: var(--BASIC-BORDER);
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  transition: var(--ANIMATION);
 }
 
 .user__buttons > .box:last-child {
-  background-color: rgb(20,245,20);
+  background-color: var(--SPECIAL-COLOR);
 }
 
 .user__buttons > .operator {
@@ -78,7 +84,7 @@ body > .user__input {
 
 .user__buttons > .number {
   background-color: rgb(37, 29, 29);
-  color: whitesmoke;
+  color: var(--LIGHT-COLOR);
   border-color: rgb(74, 77, 77);
 }
 
@@ -87,13 +93,11 @@ body > .user__input {
   flex-flow: row wrap;
   justify-content: space-evenly;
   max-width: 80.67%;
-  transition: var(--ANIMATION);
 }
 
 .misc__input > .box {
   width: 65.5px;
   height: 65.5px;
-  transition: var(--ANIMATION);
 }
 
 .main__calculator > h1 {
